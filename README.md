@@ -75,6 +75,18 @@ if (result != ASCIIBIN_SUCCESS) {
 }
 ```
 
+## Build Configuration
+
+This project is configured to exclude compiled files from version control:
+
+- **`.gitignore`**: Excludes `bin/`, `obj/`, and other build artifacts
+- **`.gitattributes`**: Prevents merge conflicts with compiled files
+- **Pre-commit hook**: Ensures compiled files are rebuilt before committing
+
+The build system automatically manages compiled files locally while keeping the repository clean.
+
 ## License
+
+This project is licensed under the GNU General Public License v3 (GPLv3). See the [LICENSE](LICENSE) file for the full license text.
 
 This project follows clean code principles and modular design patterns for maintainable, testable, and extensible C code.
