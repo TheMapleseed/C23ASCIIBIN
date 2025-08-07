@@ -1,0 +1,27 @@
+# Treat compiled files as binary to avoid merge conflicts
+bin/* -diff
+obj/* -diff
+*.o -diff
+*.a -diff
+*.so -diff
+*.dylib -diff
+*.dll -diff
+*.exe -diff
+
+# Use 'ours' merge strategy for compiled files (if they somehow get tracked)
+bin/* merge=ours
+obj/* merge=ours
+*.o merge=ours
+*.a merge=ours
+*.so merge=ours
+*.dylib merge=ours
+*.dll merge=ours
+*.exe merge=ours
+
+# Text files
+*.c text
+*.h text
+*.md text
+*.txt text
+*.make text
+Makefile text
